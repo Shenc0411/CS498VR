@@ -362,6 +362,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 150681399}
+  - component: {fileID: 150681400}
   m_Layer: 0
   m_Name: Scripting
   m_TagString: Untagged
@@ -382,6 +383,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &150681400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 150681398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a877dc0e5e312a4c93f7e620455cb92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  positionTracking: 1
+  rotationTracking: 1
+  mainCameraParentTransform: {fileID: 1253135342}
+  mainCameraTransform: {fileID: 545066824}
 --- !u!1 &153273279
 GameObject:
   m_ObjectHideFlags: 0

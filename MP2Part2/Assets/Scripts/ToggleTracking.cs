@@ -9,16 +9,16 @@ public class ToggleTracking : MonoBehaviour {
     public Transform mainCameraParentTransform;
     public Transform mainCameraTransform;
 
-    private Vector3 mainCameraOriginalPosition;
-    private Vector3 mainCameraParentOriginalPosition;
-    private Quaternion mainCameraOriginalRotation;
-    private Quaternion mainCameraParentOriginalRotation;
+    private Vector3 lastMainCameraPosition;
+    private Vector3 lastMainCameraParentPosition;
+    private Quaternion lastMainCameraRotation;
+    private Quaternion lastMainCameraParentRotation;
 	// Use this for initialization
 	void Start () {
-        mainCameraOriginalPosition = mainCameraTransform.position;
-        mainCameraParentOriginalPosition = mainCameraParentTransform.position;
-        mainCameraOriginalRotation = mainCameraTransform.rotation;
-        mainCameraParentOriginalRotation = mainCameraParentTransform.rotation;
+        lastMainCameraPosition = mainCameraTransform.position;
+        lastMainCameraParentPosition = mainCameraParentTransform.position;
+        lastMainCameraRotation = mainCameraTransform.rotation;
+        lastMainCameraParentRotation = mainCameraParentTransform.rotation;
 	}
 	
 	// Update is called once per frame
@@ -35,11 +35,16 @@ public class ToggleTracking : MonoBehaviour {
         }
         if (!positionTracking)
         {
-
+            mainCameraParentTransform.position = lastMainCameraParentPosition - (mainCameraTransform.position - lastMainCameraPosition);
         }
-        if (!positionTracking)
+        if (!rotationTracking)
         {
-            mainCameraParentTransform.position = mainCameraParentOriginalPosition + (mainCameraParentTransform.position - mainCameraOriginalPosition);
+            mainCameraParentTransform.rotation = lastMainCameraRotation * Quaternion.Inverse(mainCameraTransform.rotation) * lastMainCameraParentRotation;
         }
+        
+        lastMainCameraPosition = mainCameraTransform.position;
+        lastMainCameraRotation = mainCameraTransform.rotation;
+        lastMainCameraParentPosition = mainCameraParentTransform.position;
+        lastMainCameraParentRotation = mainCameraParentTransform.rotation;
 	}
 }
