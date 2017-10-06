@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Assignment2.unity
+- path: Assets/Scenes/CS498HW2.unity
   isLoaded: 1
   isActive: 1
