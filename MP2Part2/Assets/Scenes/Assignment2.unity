@@ -363,6 +363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 150681399}
   - component: {fileID: 150681400}
+  - component: {fileID: 150681401}
   m_Layer: 0
   m_Name: Scripting
   m_TagString: Untagged
@@ -398,6 +399,21 @@ MonoBehaviour:
   rotationTracking: 1
   mainCameraParentTransform: {fileID: 1253135342}
   mainCameraTransform: {fileID: 545066824}
+--- !u!114 &150681401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 150681398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 530c9bc2aca77df48bb6570807396df3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CameraLoc: {fileID: 545066824}
+  RedBall: {fileID: 540682559}
+  BlueBallOne: {fileID: 117224832}
+  BlueBallTwo: {fileID: 90875324}
 --- !u!1 &153273279
 GameObject:
   m_ObjectHideFlags: 0
