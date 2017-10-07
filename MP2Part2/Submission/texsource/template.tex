@@ -1,0 +1,82 @@
+% ---------
+%  Compile with "pdflatex hw0".
+% --------
+%!TEX TS-program = pdflatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{article}
+\usepackage{jeffe,handout,graphicx}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}		% Allow some non-ASCII Unicode in source
+
+%  Redefine suits
+\usepackage{pifont}
+\def\Spade{\text{\ding{171}}}
+\def\Heart{\text{\textcolor{Red}{\ding{170}}}}
+\def\Diamond{\text{\textcolor{Red}{\ding{169}}}}
+\def\Club{\text{\ding{168}}}
+
+\def\Cdot{\mathbin{\text{\normalfont \textbullet}}}
+\def\Sym#1{\textbf{\texttt{\color{BrickRed}#1}}}
+
+\newtheorem{claim}{Claim}
+
+% =====================================================
+%   Define common stuff for solution headers
+% =====================================================
+\Class{CS 498 VR}
+\Semester{Fall 2017}
+\Authors{2}
+\AuthorOne{Cong Shen}{cshen19@illinois.edu}
+\AuthorTwo{Hongting Liu}{hl25@illinis.edu}
+%\Section{}
+
+% =====================================================
+\begin{document}
+
+% ---------------------------------------------------------
+
+
+\HomeworkHeader{2}{4}	% homework number, problem number
+
+\begin{quote}
+{\Large \textbf{Condition number of $e^x$}}\\
+
+\begin{enumerate}[1.]
+    \item
+    What is the approximate condition number for evaluating function $f(x) = e^x$ ?
+    \item
+    How large is $f(x)$ when the approximate condition number is $10^8$?
+\end{enumerate}
+\end{quote}
+\hrule
+
+\begin{solution}
+    
+\begin{enumerate}[1.]
+    \item 
+    \[
+        \begin{bmatrix}
+            x_{11}       & x_{12} & x_{13} & \dots & x_{1n} \\
+            x_{21}       & x_{22} & x_{23} & \dots & x_{2n} \\
+            \hdotsfor{5} \\
+            x_{d1}       & x_{d2} & x_{d3} & \dots & x_{dn}
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+            x_{11} & x_{12} & x_{13} & \dots  & x_{1n} \\
+            x_{21} & x_{22} & x_{23} & \dots  & x_{2n} \\
+            \vdots & \vdots & \vdots & \ddots & \vdots \\
+            x_{d1} & x_{d2} & x_{d3} & \dots  & x_{dn}
+        \end{bmatrix}
+    \]
+    \item
+        If $cond = 10^8$ then we will have $x = 10^8$ or $x = -10^8$.\\
+        In the case that $x = 10^8$, then $f(x) = e^{10^8} = e ^ {80}$.\\
+        In the case that $x = -10^8$, then $f(x) = e^{-10^8} = e ^ {-80}$
+\end{enumerate}
+
+\end{solution}
+
+
+\end{document}
