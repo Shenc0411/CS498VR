@@ -10,7 +10,9 @@ public class PlaneController : MonoBehaviour {
     public float acceleration;
     public float accelerationFactor;
     public float fractionFactor;
-    public Quaternion direction;
+    public float rotationFactor;
+    public Quaternion roll;
+    public Quaternion pitch;
 
 
 
@@ -20,7 +22,17 @@ public class PlaneController : MonoBehaviour {
 	void Start () {
         velocity = 0;
         acceleration = 0;
-        direction = Quaternion.identity;
+
+        roll = Quaternion.identity;
+        roll.x = 0;
+        roll.y = 0;
+        roll.z = 1;
+
+        pitch = Quaternion.identity;
+        pitch.x = 1;
+        pitch.y = 0;
+        pitch.z = 0;
+
         planeTransform = plane.transform;
         planeRigidBody = plane.GetComponent<Rigidbody>();
 	}
@@ -31,6 +43,21 @@ public class PlaneController : MonoBehaviour {
         //Update velocity
         float rightTriggerAxis = Input.GetAxis("XBOX_Right_Trigger");
         float leftTriggerAxis = Input.GetAxis("XBOX_Left_Trigger");
+        float leftStickXAxis = Input.GetAxis("XBOX_Left_Stick_X");
+        float leftStickYAxis = Input.GetAxis("XBOX_Left_Stick_Y");
+        Debug.Log("XBOX_Left_Stick_X:" + leftStickXAxis);
+        Debug.Log("XBOX_Left_Stick_Y:" + leftStickYAxis);
+        roll.w += leftStickXAxis * rotationFactor;
+        if (roll.w > 2 * Mathf.PI)
+            roll.w -= 2 * Mathf.PI;
+        else if (roll.w < -2 * Mathf.PI)
+            roll.w += 2 * Mathf.PI;
+        pitch.w += leftStickYAxis * rotationFactor;
+        if (pitch.w > 2 * Mathf.PI)
+            pitch.w -= 2 * Mathf.PI;
+        else if (pitch.w < -2 * Mathf.PI)
+            pitch.w += 2 * Mathf.PI;
+        planeTransform.rotation = roll * pitch;
         acceleration = (rightTriggerAxis - leftTriggerAxis) * accelerationFactor;
         velocity += (acceleration - velocity * fractionFactor) * Time.deltaTime;
         planeTransform.localPosition = planeTransform.localPosition + new Vector3(0, 0, velocity * Time.deltaTime);
