@@ -20,11 +20,12 @@ public class Bullet : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Collision with" + collision.other.tag);
         if (collision.other.CompareTag("target"))
         {
             Debug.Log("Hit Target!");
-            GameObject.Destroy(collision.other.gameObject);
-            Destroy(gameObject);
+            
         }
+        Destroy(gameObject);
     }
 }
