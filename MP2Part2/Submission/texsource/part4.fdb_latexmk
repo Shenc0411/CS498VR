@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1507343316 "/Users/SC/Documents/UIUC/CS498VR/MP2Part2/Submission/part4.tex" "part4.pdf" "part4" 1507343317
-  "/Users/SC/Documents/UIUC/CS498VR/MP2Part2/Submission/part4.tex" 1507343316 5430 ea0d5e04389bd387d500fbaedfe11fdd ""
+["pdflatex"] 1507351719 "/Users/SC/Documents/UIUC/CS498VR/MP2Part2/Submission/texsource/part4.tex" "part4.pdf" "part4" 1507351720
+  "/Users/SC/Documents/UIUC/CS498VR/MP2Part2/Submission/texsource/part4.tex" 1507351719 5429 4ca90e29e4c91f159ae0ea0e8017a00d ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc" 1276641224 6938 5135be6a8802f13a7faf296d1959a1ab ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/xcharter/xch1_bwwzc2.enc" 1437951022 3249 2aa3e09d1102047a1812988d3ecb8e54 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
@@ -162,11 +162,11 @@
   "/usr/local/texlive/2016/texmf.cnf" 1463979140 577 2938757e76f31531e65cc647e3507693 ""
   "handout.sty" 1472323676 7237 2c2a86f2c0a0f2c5b96ec2f4c3526b91 ""
   "jeffe.sty" 1471960033 21200 a79be7ec87ce32bf9b9aa6fe9e990b64 ""
-  "part4.aux" 1507343317 662 b2b94621371df8d9296b8bf5bec1b851 ""
-  "part4.out" 1507343317 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "part4.tex" 1507343316 5430 ea0d5e04389bd387d500fbaedfe11fdd ""
+  "part4.aux" 1507351720 662 b2b94621371df8d9296b8bf5bec1b851 ""
+  "part4.out" 1507351720 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "part4.tex" 1507351719 5429 4ca90e29e4c91f159ae0ea0e8017a00d ""
   (generated)
   "part4.pdf"
+  "part4.out"
   "part4.aux"
   "part4.log"
-  "part4.out"

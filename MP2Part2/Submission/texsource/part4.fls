@@ -1,8 +1,8 @@
-PWD /Users/SC/Documents/UIUC/CS498VR/MP2Part2/Submission
+PWD /Users/SC/Documents/UIUC/CS498VR/MP2Part2/Submission/texsource
 INPUT /usr/local/texlive/2016/texmf.cnf
 INPUT /usr/local/texlive/2016/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/SC/Documents/UIUC/CS498VR/MP2Part2/Submission/part4.tex
+INPUT /Users/SC/Documents/UIUC/CS498VR/MP2Part2/Submission/texsource/part4.tex
 OUTPUT part4.log
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
